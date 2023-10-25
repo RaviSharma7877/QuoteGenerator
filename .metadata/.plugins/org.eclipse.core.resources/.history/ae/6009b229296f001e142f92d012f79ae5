@@ -1,0 +1,17 @@
+package com.masai;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/shayari")
+public class ShayariController {
+    @Autowired
+    private GptIntegration gpt3Service;
+
+    @PostMapping("/generate")
+    public String generateShayari(@RequestBody String prompt) {
+        return gpt3Service.generateSharyari(prompt);
+    }
+}
+

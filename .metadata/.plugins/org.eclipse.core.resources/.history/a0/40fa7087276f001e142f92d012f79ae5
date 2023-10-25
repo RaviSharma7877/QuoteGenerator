@@ -1,0 +1,33 @@
+package com.masai;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+
+public class GptIntegration {
+
+	private static final String key = "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";
+	private static final String gptEndpoint = "https://api.openai.com/v1/engines/davinci/completions";
+	
+	public String generateSharyari (String prompt) {
+		try {
+			HttpClient httpClient = HttpClients.createDefault();
+			HttpPost request = new HttpPost(gptEndpoint);
+			
+			String requestBody = "{\"prompt\": \"" + prompt + "\", \"max_tokens\": 50}";
+			request.setEntity(new StringEntity(requestBody));
+			
+			
+			HttpResponse response = httpClient.execute(request);
+			String responseJson = EntityUtils.toString(response.getEntity());
+
+            return responseJson;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+	}
+}

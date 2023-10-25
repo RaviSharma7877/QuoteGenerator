@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.net.http.HttpClient"/>
+    <fullyQualifiedTypeName name="org.apache.http.impl.client.HttpClients"/>
+    <fullyQualifiedTypeName name="org.apache.http.client.methods.HttpPost"/>
+    <fullyQualifiedTypeName name="org.apache.http.entity.StringEntity"/>
+    <fullyQualifiedTypeName name="org.apache.http.HttpResponse"/>
+    <fullyQualifiedTypeName name="org.apache.http.util.EntityUtils"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.masai.Message"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="com.masai.ChatGptResponse"/>
+</qualifiedTypeNameHistroy>
